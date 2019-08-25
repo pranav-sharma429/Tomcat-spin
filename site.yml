@@ -1,0 +1,10 @@
+---
+# This playbook deploys a simple standalone Tomcat 7 server.
+#vars:
+- hosts: all
+  remote_user: root
+
+  roles:
+    - selinux
+    - tomcat
+    - iptables

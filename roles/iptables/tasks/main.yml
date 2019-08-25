@@ -1,0 +1,24 @@
+---
+- name: Adding Firewall http rules
+  iptables:
+    chain: INPUT
+    protocol: tcp
+    destination_port: "{{ http_port }}"
+    jump: ACCEPT
+    rule_num: 5
+    comment: Adding http port
+  notify: saving iptables
+  tags: firewall
+
+
+- name: Adding Firewall https rules
+  iptables:
+    chain: INPUT
+    protocol: tcp
+    destination_port: "{{ https_port }}"
+    jump: ACCEPT
+    rule_num: 6
+    comment: Adding https port
+  notify: saving iptables
+  tags: firewall
+
