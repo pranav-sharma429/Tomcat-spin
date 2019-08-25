@@ -13,3 +13,15 @@ Ansible 2.7
 * Changes ownership, Configure tomcat parameters and starts the service
 * Deploys a Calendar war package to WEBAPPS of tomcat and re-initiates the service
 
+## Steps
+```
+git clone https://github.com/pranav-sharma429/Tomcat-spin.git
+```
+
+```
+cd Tomcat-spin
+```
+
+```
+ansible-playbook -i hosts site.yml
+```
